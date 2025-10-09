@@ -2,19 +2,8 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
 
-    val a: Int = 1000
-    val log: String = "Some log message"
-    val b: Float = 33.65f
-    val c: Double = 87.12
-    val d: Boolean = true
-    val e: Char = 'q'
-    val f: Long = 1000_000_000_000_000
+    val greenNumbers = listOf(1, 4, 23)
+    val redNumbers = listOf(17, 2)
 
-    println("a: $a")
-    println("log: $log")
-    println("b: $b")
-    println("c: $c")
-    println("d: $d")
-    println("e: $e")
-    println("f: $f")
+    println("Total numbers: ${greenNumbers.count() + redNumbers.count()}")
 }
