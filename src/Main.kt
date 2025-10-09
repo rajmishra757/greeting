@@ -1,8 +1,12 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import kotlin.random.Random
+
 fun main() {
 
-    val number2word = mapOf(1 to "ONE", 2 to "TWO", 3 to "THREE")
-    val n = 2
-    println("$n is spelt as '${number2word[n]}'")
+    val firstResult = Random.nextInt(6)
+    val secondResult = Random.nextInt(6)
+    println("First result: $firstResult")
+    println("Second result: $secondResult")
+    println(if (firstResult == secondResult) "You win :)" else "You lose :(")
 }
