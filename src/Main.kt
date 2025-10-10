@@ -1,10 +1,21 @@
-import kotlin.math.PI
-
 fun main() {
 
-    println("Enter radius of the circle:")
-    val radius = readln()
-    println("Area of the circle: ${circleArea(radius.toInt())}")
+    println("Enter hours, minutes and seconds:")
+    val hours = readln()
+    val minutes = readln()
+    val seconds = readln()
+    println(
+        "$hours hour(s) $minutes minute(s) $seconds second(s) = ${
+            intervalInSeconds(
+                hours.toInt(),
+                minutes.toInt(),
+                seconds.toInt()
+            )
+        } seconds"
+    )
 }
 
-fun circleArea(radius: Int) = PI * radius * radius
+fun intervalInSeconds(hours: Int = 0, minutes: Int = 0, seconds: Int = 0): Int {
+
+    return ((hours * 60) + minutes) * 60 + seconds
+}
