@@ -1,14 +1,10 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import kotlin.math.PI
+
 fun main() {
 
-    println("Enter a letter:")
-    val starter = readln()
-
-    val words = listOf<String>("dinosaur", "limousine", "magazine", "language")
-
-    for (word in words) {
-
-        if (word.startsWith(starter, true)) println(word)
-    }
+    println("Enter radius of the circle:")
+    val radius = readln()
+    println("Area of the circle: ${circleArea(radius.toInt())}")
 }
+
+fun circleArea(radius: Int) = PI * radius * radius
