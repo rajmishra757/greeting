@@ -2,15 +2,25 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
 
-    println("Type a button name:")
-    val button = readln()
+    val totalPizzaSlices = 8
 
-    println(when (button.uppercase()) {
+    // Using while
+    var sliceCount = 1
+    while (sliceCount < totalPizzaSlices) {
 
-            "A" -> "Yes"
-            "B" -> "No"
-            "X" -> "Menu"
-            "Y" -> "Nothing"
-            else -> "There is no such button"
-        })
+        println("There is only $sliceCount slice/s of pizza :(")
+        sliceCount++
+    }
+    println("There are $sliceCount slices of pizza. Hooray! We have a whole pizza! :D\n")
+
+    // Using do-while
+    sliceCount = 0
+    do {
+
+        sliceCount++
+        if (sliceCount < totalPizzaSlices)
+            println("There is only $sliceCount slice/s of pizza :(")
+        else
+            println("There are $sliceCount slices of pizza. Hooray! We have a whole pizza! :D")
+    } while (sliceCount < totalPizzaSlices)
 }
