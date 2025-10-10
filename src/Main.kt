@@ -2,11 +2,13 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
 
-    for (num in 1..100) println(when {
+    println("Enter a letter:")
+    val starter = readln()
 
-        num % 3 == 0 && num % 5 == 0 -> "fizzbuzz"
-        num % 3 == 0 -> "fizz"
-        num % 5 == 0 -> "buzz"
-        else -> "$num"
-    })
+    val words = listOf<String>("dinosaur", "limousine", "magazine", "language")
+
+    for (word in words) {
+
+        if (word.startsWith(starter, true)) println(word)
+    }
 }
